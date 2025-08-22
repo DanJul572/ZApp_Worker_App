@@ -1,5 +1,5 @@
 import { Connection } from "rabbitmq-client";
-import { env } from "./env.js";
+import { env } from "./env";
 
 export const rabbit = new Connection(env.rabbitUrl);
 rabbit.on("error", (err) => {

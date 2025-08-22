@@ -5,10 +5,11 @@
 	"main": "src/index.js",
 	"type": "module",
 	"scripts": {
+		"build": "node esbuild.config.js",
 		"lint": "biome check --write",
-		"start:dev": "cross-env NODE_ENV=development nodemon src/index.js",
-		"start:stage": "cross-env NODE_ENV=staging nodemon src/index.js",
-		"start:prod": "cross-env NODE_ENV=production nodemon src/index.js"
+		"start:dev": "cross-env NODE_ENV=development && pnpm build && node dist/bundle.js",
+		"start:stage": "cross-env NODE_ENV=staging && pnpm build && node dist/bundle.js",
+		"start:prod": "cross-env NODE_ENV=production && pnpm build && node dist/bundle.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -25,6 +26,7 @@
 		"@biomejs/biome": "2.2.0",
 		"cross-env": "^10.0.0",
 		"dotenv-flow": "^4.1.0",
+		"esbuild": "^0.25.9",
 		"nodemon": "^3.1.10"
 	}
 }

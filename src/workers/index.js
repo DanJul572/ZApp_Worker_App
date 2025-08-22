@@ -1,4 +1,4 @@
-import { rabbit } from "../configs/rabbitmq.js";
+import { rabbit } from "../configs/rabbitmq";
 
 export function startWorker() {
 	console.log("🚀 Worker started, listening for messages...");

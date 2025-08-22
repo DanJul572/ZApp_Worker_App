@@ -1,6 +1,8 @@
 import dotenv from "dotenv-flow";
 
-dotenv.config();
+dotenv.config({
+	node_env: process.env.NODE_ENV || "development",
+});
 
 export const env = {
 	rabbitUrl: process.env.MESSAGE_BROKER_URL,
