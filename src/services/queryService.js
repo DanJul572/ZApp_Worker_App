@@ -1,4 +1,4 @@
-import { sequelize } from "../configs/database";
+import { sequelize } from "../configs/database.js";
 
 export async function runQuery(query) {
 	try {

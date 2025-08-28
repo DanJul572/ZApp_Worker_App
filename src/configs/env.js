@@ -4,6 +4,8 @@ dotenv.config({
 	node_env: process.env.NODE_ENV || "development",
 });
 
+console.log(process.env.MESSAGE_BROKER_URL);
+
 export const env = {
 	rabbitUrl: process.env.MESSAGE_BROKER_URL,
 	db: {
