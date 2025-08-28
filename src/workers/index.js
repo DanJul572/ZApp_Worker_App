@@ -1,7 +1,7 @@
 import { rabbit } from "../configs/rabbitmq";
 
 export function startWorker() {
-	console.log("🚀 Worker started, listening for messages...");
+	console.log("Worker started, listening for messages...");
 	rabbit.createConsumer(
 		{
 			queue: "user-events",
@@ -11,7 +11,7 @@ export function startWorker() {
 			queueBindings: [{ exchange: "my-events", routingKey: "users.*" }],
 		},
 		async (msg) => {
-			console.log("📩 Message received:", msg);
+			console.log("Message received:", msg);
 		},
 	);
 }
