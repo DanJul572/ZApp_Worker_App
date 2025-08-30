@@ -12,8 +12,8 @@ importers:
         specifier: ^0.10.9
         version: 0.10.9
       bullmq:
-        specifier: ^5.58.2
-        version: 5.58.2
+        specifier: ^5.58.3
+        version: 5.58.3
       nodemailer:
         specifier: ^7.0.5
         version: 7.0.5
@@ -327,8 +327,8 @@ packages:
   buffer-more-ints@1.0.0:
     resolution: {integrity: sha512-EMetuGFz5SLsT0QTnXzINh4Ksr+oo4i+UGTXEshiGCQWnsgSs7ZhJ8fzlwQ+OzEMs0MpDAMr1hxnblp5a4vcHg==}
 
-  bullmq@5.58.2:
-    resolution: {integrity: sha512-HSGtNFM8Ttzml4OHO5cy6ju0ObnDmSedXJwpSUCFSDXR6l9MQe5CQCs/FzAb6Ac9EXYIvvF20UMV+C1OVDW39w==}
+  bullmq@5.58.3:
+    resolution: {integrity: sha512-G3mBj7lKzbCXl73UTA33+XZvOuSpktWgHFtgMu+fz22af0TQidKIPMZpQ2usHtvtVHYlcCPFQ66I54ZocKQUtw==}
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -861,7 +861,7 @@ snapshots:
 
   buffer-more-ints@1.0.0: {}
 
-  bullmq@5.58.2:
+  bullmq@5.58.3:
     dependencies:
       cron-parser: 4.9.0
       ioredis: 5.7.0
