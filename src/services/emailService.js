@@ -1,14 +1,30 @@
+import { env } from "../configs/env.js";
 import { transporter } from "../configs/mailer.js";
 
-export async function sendEmail({ to, subject, text }) {
+export async function sendEmail({
+	to,
+	cc,
+	bcc,
+	subject,
+	text,
+	html,
+	attachments,
+	priority,
+}) {
 	try {
 		const info = await transporter.sendMail({
-			from: '"Worker Service" <no-reply@example.com>',
+			from: env.email.from,
 			to,
+			cc: cc || undefined,
+			bcc: bcc || undefined,
 			subject,
 			text,
+			html,
+			attachments,
+			priority,
 		});
 		console.log("Email sent:", info.messageId);
+		return info;
 	} catch (err) {
 		console.error("Email error:", err);
 		throw err;
