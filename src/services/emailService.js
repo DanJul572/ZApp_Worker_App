@@ -10,6 +10,7 @@ export async function sendEmail({
 	html,
 	attachments,
 	priority,
+	headers,
 }) {
 	try {
 		const info = await transporter.sendMail({
@@ -22,6 +23,7 @@ export async function sendEmail({
 			html,
 			attachments,
 			priority,
+			headers,
 		});
 		console.log("Email sent:", info.messageId);
 		return info;

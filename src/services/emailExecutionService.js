@@ -71,6 +71,8 @@ export async function processExecution(executionId) {
 				subject: execution.subject,
 				html: execution.body,
 				priority: execution.priority,
+				// Extra headers from the API, e.g. List-Unsubscribe.
+				headers: execution.headers || undefined,
 				attachments: await getAttachments(execution.emailId, transaction),
 			});
 		} catch (err) {
